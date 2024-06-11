@@ -1,0 +1,143 @@
+/* Estilos básicos */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.top-left-image {
+    position: absolute;
+    top: 100px;
+    left: 18px;
+    margin: 10px; /* Puedes ajustar el margen según necesites */
+    width: 400px;  /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+}
+
+
+/* Estilo de la cuadrícula */
+.grid {
+    width: 100%;
+    height: 600px;
+    border: solid 4px #ff00ff;
+    border-radius: 20px;
+    display: grid;
+    flex-wrap: wrap;
+    background: url('espacio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+    grid-template-columns: repeat(20, 30px);
+    grid-template-rows: repeat(20, 30px);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#start-button {
+    position: absolute;
+    top: 350px;
+    left: 47%;
+    transform: translateX(-540%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+    border: 5px solid #8B0A1A;
+    border: 10px solid black;
+}
+
+#start-button::before {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #8B0A1A;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#start-button:active {
+    
+    background-color: #E60000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.invader {
+    background-image: url('bicho.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transform: scale(0.8);
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.shooter {
+    background-image: url('enterprise.png');
+    background-size: 60% 110%;
+    background-repeat: no-repeat;
+}
+
+.laser {
+    background-image: url('laser.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleX(0.5);
+}
+
+.boom {
+    background-image: url('explosion.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    animation: explode 1s ease-in-out both;
+}
+
+@keyframes explode {
+    0% { 
+        transform: scale(1) rotate(0deg); 
+        opacity: 1; 
+        filter: blur(0px);
+    }
+}
+
+/* Estilo para el Score */
+h1 {
+    position: absolute;
+    top: 470px; /* Ajusta esta posición según la ubicación de tu botón */
+    left: 45%; /* La posición horizontal central */
+    transform: translateX(-310%); /* Centrar horizontalmente */
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 30px;
+    border-radius: 5px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    height: 100px; /* Altura deseada */
+    width: 125px;
+}
+
+
+
